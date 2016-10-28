@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:id="@+id/menu_search"
+        android:title="Serch"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+    <item android:id="@+id/menu_build"
+        android:title="@string/build"
+        android:icon="@drawable/ic_build"
+        app:showAsAction="ifRoom"
+        android:onClick="build"
+        />
+    <item android:id="@+id/menu_renew"
+        android:title="@string/renew"
+        android:icon="@drawable/ic_renew"
+        app:showAsAction="ifRoom"
+        android:onClick="sync"
+        />
+    <item android:id="@+id/menu_info"
+        android:title="@string/info"
+        android:icon="@drawable/ic_info"
+        app:showAsAction="ifRoom"
+        android:onClick="info"
+        />
+</menu>

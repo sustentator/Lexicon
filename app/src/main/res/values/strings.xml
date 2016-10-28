@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lexicon</string>
+    <string name="build">Labor</string>
+    <string name="renew">Renovatio</string>
+    <string name="info">Informatio</string>
+    <string name="search_hint">scribe</string>
+</resources>
