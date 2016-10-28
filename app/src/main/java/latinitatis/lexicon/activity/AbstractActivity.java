@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.r0adkll.slidr.Slidr;
+
 import latinitatis.lexicon.R;
 
 public abstract class AbstractActivity extends AppCompatActivity {
@@ -21,6 +23,8 @@ public abstract class AbstractActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         toolbar.setTitle(getString(title()));
         setSupportActionBar(toolbar);
+
+        Slidr.attach(this);
     }
 
     @Override
