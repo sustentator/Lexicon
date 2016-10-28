@@ -3,9 +3,9 @@ package latinitatis.lexicon.activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -87,16 +87,20 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     public void build(MenuItem item) {
-        doSearch("build");
+        startActivity(BuildActivity.class);
     }
 
     public void sync(MenuItem item) {
-        Intent intent = new Intent(SearchActivity.this, SyncActivity.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_rigth, android.R.anim.fade_out);
+        startActivity(SyncActivity.class);
     }
 
     public void info(MenuItem item) {
-        doSearch("info");
+        startActivity(InfoActivity.class);
+    }
+
+    private void startActivity(Class<?> clazz) {
+        Intent intent = new Intent(SearchActivity.this, clazz);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_rigth, android.R.anim.fade_out);
     }
 }
